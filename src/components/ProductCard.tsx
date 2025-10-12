@@ -10,7 +10,6 @@ interface ProductCardProps {
   originalPrice?: number;
   image: string;
   badge?: string;
-  rating?: number;
 }
 
 const ProductCard = ({
@@ -21,9 +20,7 @@ const ProductCard = ({
   image,
   badge,
 }: ProductCardProps) => {
-  const discount = originalPrice
-    ? Math.round(((originalPrice - price) / originalPrice) * 100)
-    : 0;
+  const discount = originalPrice ? Math.round(((originalPrice - price) / originalPrice) * 100) : 0;
 
   return (
     <div className="group relative bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100">
@@ -65,10 +62,10 @@ const ProductCard = ({
         </Link>
 
         <div className="flex items-center gap-2">
-          <span className="text-lg font-bold text-gray-900">${price.toFixed(2)}</span>
+          <span className="text-lg font-bold text-gray-900">${price.toFixed(2)} CAD</span>
           {originalPrice && (
             <span className="text-sm text-gray-400 line-through">
-              ${originalPrice.toFixed(2)}
+              ${originalPrice.toFixed(2)} CAD
             </span>
           )}
         </div>

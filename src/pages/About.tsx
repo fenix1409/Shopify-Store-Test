@@ -37,7 +37,7 @@ const About: React.FC = () => (
     <Header />
 
     <main className="flex-1">
-      <section className="bg-gray-100 py-16">
+      <section data-aos="fade-right" className="bg-gray-100 py-16">
         <div className="mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">About Store</h1>
           <p className="text-lg text-gray-600 max-w-2xl">
@@ -48,7 +48,7 @@ const About: React.FC = () => (
 
       <section className="mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
+          <div data-aos="fade-right">
             <h2 className="text-3xl font-bold mb-6">Our Story</h2>
             <div className="space-y-4 text-gray-600">
               <p>
@@ -62,13 +62,13 @@ const About: React.FC = () => (
               </p>
             </div>
           </div>
-          <div className="bg-gray-200 aspect-video rounded-lg flex items-center justify-center">
+          <div data-aos="fade-left" className="bg-gray-200 aspect-video rounded-lg flex items-center justify-center">
             <span className="text-gray-500">About Us Image</span>
           </div>
         </div>
       </section>
 
-      <section className="bg-gray-100 py-16">
+      <section data-aos="zoom-in-up" className="bg-gray-100 py-16">
         <div className="mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Our Values</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -85,7 +85,7 @@ const About: React.FC = () => (
         </div>
       </section>
 
-      <section className="mx-auto px-4 py-16">
+      <section data-aos="zoom-in-up" className="mx-auto px-4 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {STATS.map((stat) => (
             <div className="text-center" key={stat.label}>

@@ -50,11 +50,11 @@ const BestSellerSection = ({ title, products, category }: BestSellerSectionProps
             
             <div className="flex items-center gap-2">
               <span className="text-lg font-bold text-green-600">
-                ${product.price.toFixed(2)}
+                ${product.price.toFixed(2)} CAD
               </span>
               {product.originalPrice && (
                 <span className="text-xs text-gray-400 line-through">
-                  ${product.originalPrice.toFixed(2)}
+                  ${product.originalPrice.toFixed(2)} CAD
                 </span>
               )}
             </div>

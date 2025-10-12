@@ -52,14 +52,32 @@ const Index: React.FC = () => {
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="max-w-2xl">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+              <h1
+                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
                 Summer
-                <span className="block text-5xl md:text-6xl lg:text-7xl text-white mt-2">Collection 2024</span>
+                <span
+                  className="block text-5xl md:text-6xl lg:text-7xl text-white mt-2"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                >
+                  Collection 2024
+                </span>
               </h1>
-              <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
+              <p
+                className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
                 Discover premium quality products with exclusive discounts. Limited time offers await!
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 items-start">
+              <div
+                className="flex flex-col sm:flex-row gap-4 items-start"
+                data-aos="fade-up"
+                data-aos-delay="500"
+              >
                 <Button asChild size="lg" className="gap-3 bg-white text-gray-900 hover:bg-gray-100 font-semibold text-lg px-8 py-4 rounded-none shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105" >
                   <Link to="/collection">
                     Shop Collection
@@ -79,17 +97,17 @@ const Index: React.FC = () => {
           </div>
         </section>
 
-        <section className="bg-white border-b border-gray-200">
+        <section className="bg-white border-b border-gray-200" data-aos="fade-up" data-aos-delay="200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <TrustBadges />
           </div>
         </section>
 
-        <section className="bg-white border-b border-gray-200">
+        <section className="bg-white border-b border-gray-200" data-aos="fade-up">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {FEATURES.map((feature, index) => (
-                <div key={index} className="text-center group">
+                <div key={index} className="text-center group" data-aos="fade-up" data-aos-delay={index * 100}>
                   <div className="bg-white rounded-lg p-6 group-hover:shadow-lg transition-all duration-300 border border-gray-100">
                     <div className="bg-gray-100 w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-gray-200 transition-colors duration-300">
                       <feature.icon className="h-7 w-7 text-gray-700" />
@@ -103,20 +121,22 @@ const Index: React.FC = () => {
           </div>
         </section>
 
-        <section className="bg-white">
+        <section className="bg-white" data-aos="fade-up">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div className="text-center mb-16">
+            <div className="text-center mb-16" data-aos="fade-up" data-aos-delay="100">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Featured Products</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Curated selection of our most popular and trending items
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-              {featuredProducts.map((product) => (
-                <ProductCard key={product.id} {...product} />
+              {featuredProducts.map((product, index) => (
+                <div key={product.id} data-aos="fade-up" data-aos-delay={index * 150}>
+                  <ProductCard {...product} />
+                </div>
               ))}
             </div>
-            <div className="text-center">
+            <div className="text-center" data-aos="zoom-in" data-aos-delay="400">
               <Button asChild size="lg" className="bg-gray-900 text-white hover:bg-gray-800 px-8 py-4 text-lg rounded-none">
                 <Link to="/collection">View All Products</Link>
               </Button>
@@ -124,31 +144,34 @@ const Index: React.FC = () => {
           </div>
         </section>
 
-        <section className="bg-gray-50">
+        <section className="bg-gray-50" data-aos="fade-up">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-20">
-            {bestSellers.map((item) => (
-              <BestSellerSection
-                key={item.category}
-                title={item.title}
-                products={getProductsByCategory(item.category)}
-                category={item.category}
-              />
+            {bestSellers.map((item, index) => (
+              <div key={item.category} data-aos="fade-up" data-aos-delay={index * 100}>
+                <BestSellerSection
+                  title={item.title}
+                  products={getProductsByCategory(item.category)}
+                  category={item.category}
+                />
+              </div>
             ))}
           </div>
         </section>
 
-        <section className="bg-white">
+        <section className="bg-white" data-aos="fade-up">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div className="text-center mb-16">
+            <div className="text-center mb-16" data-aos="fade-up" data-aos-delay="100">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Shop by Category</h2>
               <p className="text-lg text-gray-600">Find exactly what you're looking for</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {CATEGORIES.map((category) => (
+              {CATEGORIES.map((category, index) => (
                 <Link
                   key={category.key}
                   to={`/collection?category=${category.key}`}
                   className="group relative h-80 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300"
+                  data-aos="zoom-in"
+                  data-aos-delay={index * 100}
                 >
                   <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-all duration-300" />
                   <div className="absolute inset-0 flex items-center justify-center">
@@ -167,27 +190,27 @@ const Index: React.FC = () => {
           </div>
         </section>
 
-        <section className="bg-gray-900">
+        <section className="bg-gray-900" data-aos="fade-up">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" data-aos="fade-up" data-aos-delay="100">
               Join Our Newsletter
             </h2>
-            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
               Get exclusive access to special offers, new arrivals, and insider updates.
             </p>
-            <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" onSubmit={(e) => { e.preventDefault() }}>
+            <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" onSubmit={(e) => { e.preventDefault() }} data-aos="fade-up" data-aos-delay="300">
               <input
                 type="email"
                 placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 rounded-none text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-900 text-base border-0"
+                className="flex-1 px-4 py-3 border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-sm md:text-base"
                 required
                 autoComplete="email"
               />
-              <Button type="submit" className="bg-white text-gray-900 hover:bg-gray-100 px-6 py-3 text-base font-semibold rounded-none whitespace-nowrap transition-all duration-300">
+              <Button type="submit" className="bg-white text-gray-900 hover:bg-gray-100 px-6 py-3 text-base font-semibold cursor-pointer whitespace-nowrap transition-all duration-300 rounded-lg">
                 Subscribe
               </Button>
             </form>
-            <p className="text-gray-400 text-sm mt-4">
+            <p className="text-gray-400 text-sm mt-4" data-aos="fade-up" data-aos-delay="400">
               By subscribing, you agree to our Privacy Policy
             </p>
           </div>
