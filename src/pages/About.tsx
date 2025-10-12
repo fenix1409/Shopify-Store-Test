@@ -38,21 +38,21 @@ const About: React.FC = () => (
 
     <main className="flex-1">
       <section className="bg-gray-100 py-16">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">About EliteStore</h1>
+        <div className="mx-auto px-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">About Store</h1>
           <p className="text-lg text-gray-600 max-w-2xl">
             Your trusted destination for premium products since 2024
           </p>
         </div>
       </section>
 
-      <section className="container mx-auto px-4 py-16">
+      <section className="mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl font-bold mb-6">Our Story</h2>
             <div className="space-y-4 text-gray-600">
               <p>
-                EliteStore was founded with a simple mission: to bring high-quality, premium products to customers who appreciate excellence and craftsmanship.
+                Store was founded with a simple mission: to bring high-quality, premium products to customers who appreciate excellence and craftsmanship.
               </p>
               <p>
                 We carefully curate every item in our collection, ensuring that each product meets our rigorous standards for quality, design, and functionality. Our team of experts travels the world to discover the finest products and bring them directly to you.
@@ -69,7 +69,7 @@ const About: React.FC = () => (
       </section>
 
       <section className="bg-gray-100 py-16">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Our Values</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {VALUES.map((value) => (
@@ -85,7 +85,7 @@ const About: React.FC = () => (
         </div>
       </section>
 
-      <section className="container mx-auto px-4 py-16">
+      <section className="mx-auto px-4 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {STATS.map((stat) => (
             <div className="text-center" key={stat.label}>

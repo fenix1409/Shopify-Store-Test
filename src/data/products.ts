@@ -17,8 +17,6 @@ export interface Product {
   images?: string[];
   category: string;
   badge?: string;
-  rating: number;
-  reviews: number;
   inStock: boolean;
   features: string[];
 }
@@ -34,8 +32,6 @@ export const products: Product[] = [
     images: [product1, product1, product1],
     category: "Electronics",
     badge: "Best Seller",
-    rating: 5,
-    reviews: 324,
     inStock: true,
     features: [
       "Active Noise Cancellation",
@@ -55,8 +51,6 @@ export const products: Product[] = [
     images: [product2, product2, product2],
     category: "Bags",
     badge: "New",
-    rating: 5,
-    reviews: 187,
     inStock: true,
     features: [
       "Genuine full-grain leather",
@@ -74,8 +68,6 @@ export const products: Product[] = [
     image: product3,
     images: [product3, product3, product3],
     category: "Electronics",
-    rating: 4,
-    reviews: 256,
     inStock: true,
     features: [
       "Heart rate monitoring",
@@ -94,8 +86,6 @@ export const products: Product[] = [
     image: product4,
     images: [product4, product4, product4],
     category: "Accessories",
-    rating: 5,
-    reviews: 143,
     inStock: true,
     features: [
       "UV400 protection",
@@ -115,8 +105,6 @@ export const products: Product[] = [
     images: [product5, product5, product5],
     category: "Footwear",
     badge: "Sale",
-    rating: 5,
-    reviews: 421,
     inStock: true,
     features: [
       "Responsive foam cushioning",
@@ -135,8 +123,6 @@ export const products: Product[] = [
     image: product6,
     images: [product6, product6, product6],
     category: "Accessories",
-    rating: 5,
-    reviews: 298,
     inStock: true,
     features: [
       "RFID blocking technology",
@@ -154,8 +140,6 @@ export const products: Product[] = [
     image: product7,
     images: [product7, product7, product7],
     category: "Electronics",
-    rating: 4,
-    reviews: 234,
     inStock: true,
     features: [
       "IPX7 waterproof",
@@ -175,8 +159,6 @@ export const products: Product[] = [
     images: [product8, product8, product8],
     category: "Beauty",
     badge: "Limited Edition",
-    rating: 5,
-    reviews: 167,
     inStock: true,
     features: [
       "Eau de Parfum concentration",

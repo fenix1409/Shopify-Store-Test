@@ -13,35 +13,43 @@ interface ProductCardProps {
   rating?: number;
 }
 
-const ProductCard = ({ id, name, price, originalPrice, image, badge, rating = 5 }: ProductCardProps) => {
-  const discount = originalPrice ? Math.round(((originalPrice - price) / originalPrice) * 100) : 0;
+const ProductCard = ({
+  id,
+  name,
+  price,
+  originalPrice,
+  image,
+  badge,
+}: ProductCardProps) => {
+  const discount = originalPrice
+    ? Math.round(((originalPrice - price) / originalPrice) * 100)
+    : 0;
 
   return (
-    <div className="group relative bg-card rounded-lg overflow-hidden shadow-product hover:shadow-lg transition-all duration-300 animate-fade-in">
-      {/* Image Container */}
+    <div className="group relative bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100">
       <Link to={`/product/${id}`} className="block relative overflow-hidden">
-        <div className="aspect-square bg-secondary/20 relative">
+        <div className="aspect-square bg-gray-100 relative">
           <img
             src={image}
             alt={name}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            loading="lazy"
           />
           {badge && (
-            <Badge className="absolute top-3 left-3 bg-badge text-badge-foreground">
+            <Badge className="absolute top-3 left-3 bg-green-600 text-white text-xs px-2 py-1 rounded">
               {badge}
             </Badge>
           )}
           {discount > 0 && (
-            <Badge className="absolute top-3 right-3 bg-sale text-white">
+            <Badge className="absolute top-3 right-3 bg-red-500 text-white text-xs px-2 py-1 rounded">
               -{discount}%
             </Badge>
           )}
         </div>
-        
-        {/* Quick Actions */}
-        <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-300">
+
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <Button variant="accent" size="lg" className="gap-2">
+            <Button className="gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full shadow-lg">
               <ShoppingCart className="h-5 w-5" />
               Add to Cart
             </Button>
@@ -49,46 +57,30 @@ const ProductCard = ({ id, name, price, originalPrice, image, badge, rating = 5 
         </div>
       </Link>
 
-      {/* Product Info */}
       <div className="p-4">
         <Link to={`/product/${id}`}>
-          <h3 className="font-semibold text-base mb-2 hover:text-primary transition-colors line-clamp-2">
+          <h3 className="font-semibold text-base mb-2 hover:text-blue-600 transition-colors line-clamp-2">
             {name}
           </h3>
         </Link>
-        
-        {/* Rating */}
-        <div className="flex items-center gap-1 mb-2">
-          {[...Array(5)].map((_, i) => (
-            <svg
-              key={i}
-              className={`h-4 w-4 ${i < rating ? "fill-accent text-accent" : "fill-muted text-muted"}`}
-              viewBox="0 0 20 20"
-            >
-              <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-            </svg>
-          ))}
-          <span className="text-xs text-muted-foreground ml-1">(124)</span>
-        </div>
 
-        {/* Price */}
         <div className="flex items-center gap-2">
-          <span className="text-lg font-bold text-price">${price.toFixed(2)}</span>
+          <span className="text-lg font-bold text-gray-900">${price.toFixed(2)}</span>
           {originalPrice && (
-            <span className="text-sm text-muted-foreground line-through">
+            <span className="text-sm text-gray-400 line-through">
               ${originalPrice.toFixed(2)}
             </span>
           )}
         </div>
       </div>
 
-      {/* Wishlist Button */}
       <Button
         variant="ghost"
         size="icon"
-        className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-background/80 hover:bg-background"
+        className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/80 hover:bg-white"
+        aria-label="Add to wishlist"
       >
-        <Heart className="h-5 w-5" />
+        <Heart className="h-5 w-5 text-gray-500 hover:text-red-500 transition-colors" />
       </Button>
     </div>
   );

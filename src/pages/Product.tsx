@@ -1,12 +1,9 @@
 import { useParams, Link } from "react-router-dom";
-import { ShoppingCart, Heart, Share2, Star, Check, Truck, RefreshCw, Shield } from "lucide-react";
+import { ShoppingCart, Heart, Share2, Check, Truck, RefreshCw, Shield, Star } from "lucide-react";
 import { products } from "../data/products";
 import Header from "../components/Header";
 import { Button } from "../components/ui/button";
 import Footer from "../components/Footer";
-import { Badge } from "../components/ui/badge";
-import { Separator } from "../components/ui/separator";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs";
 import ProductCard from "../components/ProductCard";
 import ProductSubcategories from "../components/ProductSubcategories";
 
@@ -44,202 +41,174 @@ const Product = () => {
       <Header />
       
       <main className="flex-1">
-        {/* Breadcrumb */}
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <Link to="/" className="hover:text-primary transition-colors">Home</Link>
-            <span>/</span>
-            <Link to="/collection" className="hover:text-primary transition-colors">Collection</Link>
-            <span>/</span>
-            <span className="text-foreground">{product.name}</span>
+        <div className="border-b border-gray-200">
+          <div className="container mx-auto px-4 py-4">
+            <div className="flex items-center gap-2 text-sm text-gray-500">
+              <Link to="/" className="hover:text-blue-600 transition-colors">Home</Link>
+              <span>/</span>
+              <Link to="/collection" className="hover:text-blue-600 transition-colors">Collection</Link>
+              <span>/</span>
+              <span className="text-gray-900">{product.name}</span>
+            </div>
           </div>
         </div>
 
-        {/* Product Details */}
         <section className="container mx-auto px-4 py-8">
-          <div className="flex gap-8">
-            {/* Subcategories Sidebar */}
-            <div className="hidden lg:block w-56 flex-shrink-0">
+          <div className="flex flex-col lg:flex-row gap-8">
+            <div className="hidden lg:block w-64 flex-shrink-0">
               <ProductSubcategories category={product.category} />
             </div>
 
-            {/* Main Product Content */}
             <div className="flex-1">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Product Images */}
-            <div className="space-y-4">
-              <div className="aspect-square bg-secondary/20 rounded-lg overflow-hidden relative group">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-full object-cover"
-                />
-                {product.badge && (
-                  <Badge className="absolute top-4 left-4 bg-badge text-badge-foreground">
-                    {product.badge}
-                  </Badge>
-                )}
-                {discount > 0 && (
-                  <Badge className="absolute top-4 right-4 bg-sale text-white">
-                    -{discount}% OFF
-                  </Badge>
-                )}
-              </div>
-              
-              {/* Thumbnail Gallery */}
-              <div className="grid grid-cols-4 gap-4">
-                {product.images?.map((img, index) => (
-                  <div key={index} className="aspect-square bg-secondary/20 rounded-lg overflow-hidden cursor-pointer hover:ring-2 hover:ring-primary transition-all">
-                    <img src={img} alt={`${product.name} ${index + 1}`} className="w-full h-full object-cover" />
+                <div className="space-y-4">
+                  <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden relative">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="w-full h-full object-cover"
+                    />
+                    {product.badge && (
+                      <span className="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                        {product.badge}
+                      </span>
+                    )}
+                    {discount > 0 && (
+                      <span className="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                        -{discount}% OFF
+                      </span>
+                    )}
                   </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Product Info */}
-            <div className="space-y-6">
-              <div>
-                <div className="flex items-center gap-2 mb-2">
-                  <Badge variant="outline">{product.category}</Badge>
-                  {product.inStock && (
-                    <Badge className="bg-success text-success-foreground">
-                      <Check className="h-3 w-3 mr-1" />
-                      In Stock
-                    </Badge>
+                  
+                  {product.images && product.images.length > 0 && (
+                    <div className="grid grid-cols-4 gap-4">
+                      {product.images.map((img, index) => (
+                        <div key={index} className="aspect-square bg-gray-100 rounded-lg overflow-hidden cursor-pointer border-2 border-transparent hover:border-blue-500 transition-all">
+                          <img src={img} alt={`${product.name} ${index + 1}`} className="w-full h-full object-cover" />
+                        </div>
+                      ))}
+                    </div>
                   )}
                 </div>
-                <h1 className="text-3xl md:text-4xl font-bold mb-4">{product.name}</h1>
-                
-                {/* Rating */}
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="flex items-center gap-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className={`h-5 w-5 ${i < product.rating ? "fill-accent text-accent" : "fill-muted text-muted"}`}
+
+                <div className="space-y-6">
+                  <div>
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                        {product.category}
+                      </span>
+                      {product.inStock && (
+                        <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium flex items-center gap-1">
+                          <Check className="h-3 w-3" />
+                          In Stock
+                        </span>
+                      )}
+                    </div>
+                    
+                    <h1 className="text-3xl font-bold text-gray-900 mb-4">{product.name}</h1>
+
+                    <div className="flex items-center gap-2 mb-4">
+                      <div className="flex items-center gap-1">
+                        {[1, 2, 3, 4, 5].map((star) => (
+                          <Star key={star} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                        ))}
+                      </div>
+                      <span className="text-sm text-gray-600">(128 reviews)</span>
+                    </div>
+
+                    <div className="flex items-center gap-4 mb-6">
+                      <span className="text-4xl font-bold text-gray-900">${product.price.toFixed(2)}</span>
+                      {product.originalPrice && (
+                        <span className="text-xl text-gray-500 line-through">
+                          ${product.originalPrice.toFixed(2)}
+                        </span>
+                      )}
+                    </div>
+
+                    <p className="text-gray-600 leading-relaxed mb-6">
+                      {product.description}
+                    </p>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div className="flex gap-4">
+                      <Button size="lg" className="flex-1 gap-2 bg-blue-600 hover:bg-blue-700 text-white">
+                        <ShoppingCart className="h-5 w-5" />
+                        Add to Cart
+                      </Button>
+                      <Button size="lg" variant="outline" className="border-gray-300">
+                        <Heart className="h-5 w-5" />
+                      </Button>
+                      <Button size="lg" variant="outline" className="border-gray-300">
+                        <Share2 className="h-5 w-5" />
+                      </Button>
+                    </div>
+                    
+                    <Button size="lg" className="w-full bg-gray-900 hover:bg-gray-800 text-white">
+                      Buy Now
+                    </Button>
+                  </div>
+
+                  <div className="grid grid-cols-3 gap-4 pt-6">
+                    <div className="flex flex-col items-center text-center p-4 bg-gray-50 rounded-lg">
+                      <Truck className="h-6 w-6 text-blue-600 mb-2" />
+                      <span className="text-sm font-medium text-gray-900">Free Shipping</span>
+                    </div>
+                    <div className="flex flex-col items-center text-center p-4 bg-gray-50 rounded-lg">
+                      <RefreshCw className="h-6 w-6 text-blue-600 mb-2" />
+                      <span className="text-sm font-medium text-gray-900">Easy Returns</span>
+                    </div>
+                    <div className="flex flex-col items-center text-center p-4 bg-gray-50 rounded-lg">
+                      <Shield className="h-6 w-6 text-blue-600 mb-2" />
+                      <span className="text-sm font-medium text-gray-900">Secure Payment</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-16 border-t border-gray-200 pt-12">
+                <div className="border-b border-gray-200">
+                  <div className="flex space-x-8">
+                    <button className="pb-4 px-1 border-b-2 border-blue-600 text-blue-600 font-medium">
+                      Features
+                    </button>
+                    <button className="pb-4 px-1 text-gray-500 hover:text-gray-700 font-medium">
+                      Description
+                    </button>
+                    <button className="pb-4 px-1 text-gray-500 hover:text-gray-700 font-medium">
+                      Reviews (128)
+                    </button>
+                  </div>
+                </div>
+
+                <div className="py-8">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    {product.features?.map((feature, index) => (
+                      <div key={index} className="flex items-start gap-3">
+                        <Check className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-600">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {relatedProducts.length > 0 && (
+                <div className="mt-20">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-8">You May Also Like</h2>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {relatedProducts.map((relatedProduct) => (
+                      <ProductCard
+                        key={relatedProduct.id}
+                        id={relatedProduct.id}
+                        name={relatedProduct.name}
+                        price={relatedProduct.price}
+                        originalPrice={relatedProduct.originalPrice}
+                        image={relatedProduct.image}
+                        badge={relatedProduct.badge}
                       />
                     ))}
                   </div>
-                  <span className="text-sm text-muted-foreground">({product.reviews} reviews)</span>
-                </div>
-
-                {/* Price */}
-                <div className="flex items-center gap-4 mb-6">
-                  <span className="text-4xl font-bold text-price">${product.price.toFixed(2)}</span>
-                  {product.originalPrice && (
-                    <span className="text-xl text-muted-foreground line-through">
-                      ${product.originalPrice.toFixed(2)}
-                    </span>
-                  )}
-                </div>
-
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  {product.description}
-                </p>
-              </div>
-
-              <Separator />
-
-              {/* Add to Cart */}
-              <div className="space-y-4">
-                <div className="flex gap-4">
-                  <Button size="lg" variant="accent" className="flex-1 gap-2">
-                    <ShoppingCart className="h-5 w-5" />
-                    Add to Cart
-                  </Button>
-                  <Button size="lg" variant="outline">
-                    <Heart className="h-5 w-5" />
-                  </Button>
-                  <Button size="lg" variant="outline">
-                    <Share2 className="h-5 w-5" />
-                  </Button>
-                </div>
-                
-                <Button size="lg" className="w-full" variant="default">
-                  Buy Now
-                </Button>
-              </div>
-
-              <Separator />
-
-              {/* Trust Icons */}
-              <div className="grid grid-cols-3 gap-4">
-                <div className="flex flex-col items-center text-center p-4 bg-secondary/30 rounded-lg">
-                  <Truck className="h-6 w-6 text-primary mb-2" />
-                  <span className="text-xs font-medium">Free Shipping</span>
-                </div>
-                <div className="flex flex-col items-center text-center p-4 bg-secondary/30 rounded-lg">
-                  <RefreshCw className="h-6 w-6 text-primary mb-2" />
-                  <span className="text-xs font-medium">Easy Returns</span>
-                </div>
-                <div className="flex flex-col items-center text-center p-4 bg-secondary/30 rounded-lg">
-                  <Shield className="h-6 w-6 text-primary mb-2" />
-                  <span className="text-xs font-medium">Secure Payment</span>
-                </div>
-              </div>
-            </div>
-              </div>
-
-              {/* Product Details Tabs */}
-              <div className="mt-16">
-            <Tabs defaultValue="features" className="w-full">
-              <TabsList className="w-full justify-start border-b rounded-none h-auto p-0 bg-transparent">
-                <TabsTrigger value="features" className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary">
-                  Features
-                </TabsTrigger>
-                <TabsTrigger value="description" className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary">
-                  Description
-                </TabsTrigger>
-                <TabsTrigger value="reviews" className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary">
-                  Reviews ({product.reviews})
-                </TabsTrigger>
-              </TabsList>
-              
-              <TabsContent value="features" className="mt-6">
-                <div className="grid md:grid-cols-2 gap-4">
-                  {product.features.map((feature, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <Check className="h-5 w-5 text-success mt-0.5 flex-shrink-0" />
-                      <span className="text-muted-foreground">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </TabsContent>
-              
-              <TabsContent value="description" className="mt-6">
-                <div className="prose max-w-none">
-                  <p className="text-muted-foreground leading-relaxed">
-                    {product.description}
-                  </p>
-                </div>
-              </TabsContent>
-              
-              <TabsContent value="reviews" className="mt-6">
-                <div className="text-center py-12">
-                  <p className="text-muted-foreground">Customer reviews will appear here</p>
-                </div>
-              </TabsContent>
-            </Tabs>
-              </div>
-
-              {/* Related Products */}
-              {relatedProducts.length > 0 && (
-            <div className="mt-20">
-              <h2 className="text-3xl font-bold mb-8">You May Also Like</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                {relatedProducts.map((relatedProduct) => (
-                  <ProductCard
-                    key={relatedProduct.id}
-                    id={relatedProduct.id}
-                    name={relatedProduct.name}
-                    price={relatedProduct.price}
-                    originalPrice={relatedProduct.originalPrice}
-                    image={relatedProduct.image}
-                    badge={relatedProduct.badge}
-                    rating={relatedProduct.rating}
-                  />
-                ))}
-              </div>
                 </div>
               )}
             </div>

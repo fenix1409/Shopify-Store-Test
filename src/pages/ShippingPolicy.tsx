@@ -55,7 +55,7 @@ const ShippingPolicy = () => {
               <h2 className="text-2xl font-bold mb-4">Shipping Information</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  At EliteStore, we strive to deliver your orders as quickly and efficiently as possible. 
+                  At Store, we strive to deliver your orders as quickly and efficiently as possible. 
                   All orders are processed within 1-2 business days (excluding weekends and holidays).
                 </p>
                 <p>
@@ -136,7 +136,7 @@ const ShippingPolicy = () => {
               <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
                 <li>Check your tracking information for updates</li>
                 <li>Verify your shipping address was entered correctly</li>
-                <li>Contact our customer service team at support@elitestore.com</li>
+                <li>Contact our customer service team at support@shopifystore.com</li>
               </ol>
               <p className="text-muted-foreground mt-4">
                 We'll work with the carrier to locate your package and ensure delivery or provide 
@@ -148,7 +148,7 @@ const ShippingPolicy = () => {
               <h3 className="font-bold text-lg mb-2">Need Help?</h3>
               <p className="text-muted-foreground">
                 Have questions about shipping? Contact our customer service team at 
-                support@elitestore.com or call +1 (555) 123-4567.
+                support@shopifystore.com or call +1 (555) 123-4567.
               </p>
             </div>
           </div>

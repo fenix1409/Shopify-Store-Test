@@ -108,7 +108,7 @@ const ReturnPolicy = () => {
                   <div>
                     <h3 className="font-semibold mb-1">Contact Us</h3>
                     <p className="text-muted-foreground">
-                      Email support@elitestore.com or call +1 (555) 123-4567 to initiate your return. 
+                      Email support@shopifystore.com or call +1 (555) 123-4567 to initiate your return. 
                       Please provide your order number and reason for return.
                     </p>
                   </div>
@@ -184,7 +184,7 @@ const ReturnPolicy = () => {
               <h3 className="font-bold text-lg mb-2">Questions?</h3>
               <p className="text-muted-foreground">
                 If you have any questions about our return policy, please don't hesitate to contact us 
-                at support@elitestore.com or call +1 (555) 123-4567. We're here to help!
+                at support@shopifystore.com or call +1 (555) 123-4567. We're here to help!
               </p>
             </div>
           </div>

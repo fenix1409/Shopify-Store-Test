@@ -85,11 +85,11 @@ const TrackOrder = () => {
               <div className="space-y-3 text-sm text-muted-foreground">
                 <p>
                   <strong>Can't find your order number?</strong><br />
-                  Check your email inbox for the order confirmation. The subject line should be "Order Confirmation - EliteStore"
+                  Check your email inbox for the order confirmation. The subject line should be "Order Confirmation - Shopify Store".
                 </p>
                 <p>
                   <strong>Still having trouble?</strong><br />
-                  Contact our support team at support@elitestore.com or call us at +1 (555) 123-4567
+                  Contact our support team at support@shopifystore.com or call us at +1 (555) 123-4567
                 </p>
                 <p>
                   <strong>Order not showing up?</strong><br />

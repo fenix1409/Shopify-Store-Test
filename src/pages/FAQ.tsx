@@ -97,7 +97,7 @@ const FAQ = () => {
                   Contact Support
                 </a>
                 <a
-                  href="mailto:support@elitestore.com"
+                  href="mailto:support@shopifystore.com"
                   className="inline-flex items-center justify-center px-6 py-3 bg-white/10 text-white rounded-md font-medium hover:bg-white/20 transition-colors"
                 >
                   Email Us

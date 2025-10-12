@@ -25,7 +25,7 @@ const Terms = () => {
               <h2 className="text-2xl font-bold mb-4">1. Agreement to Terms</h2>
               <div className="space-y-3 text-muted-foreground">
                 <p>
-                  By accessing or using EliteStore's website and services, you agree to be bound by these Terms of Service
+                  By accessing or using Shopify Store's website and services, you agree to be bound by these Terms of Service
                   and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited
                   from using or accessing this site.
                 </p>
@@ -36,7 +36,7 @@ const Terms = () => {
               <h2 className="text-2xl font-bold mb-4">2. Use License</h2>
               <div className="space-y-3 text-muted-foreground">
                 <p>
-                  Permission is granted to temporarily access the materials on EliteStore's website for personal,
+                  Permission is granted to temporarily access the materials on Shopify Store's website for personal,
                   non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and
                   under this license you may not:
                 </p>
@@ -145,11 +145,11 @@ const Terms = () => {
               <div className="space-y-3 text-muted-foreground">
                 <p>
                   All content on this website, including but not limited to text, graphics, logos, images, audio clips,
-                  digital downloads, and software, is the property of EliteStore or its content suppliers and is protected
+                  digital downloads, and software, is the property of Shopify Store or its content suppliers and is protected
                   by international copyright laws.
                 </p>
                 <p>
-                  The compilation of all content on this site is the exclusive property of EliteStore and is protected by
+                  The compilation of all content on this site is the exclusive property of Shopify Store and is protected by
                   international copyright laws.
                 </p>
               </div>
@@ -159,7 +159,7 @@ const Terms = () => {
               <h2 className="text-2xl font-bold mb-4">10. Disclaimer of Warranties</h2>
               <div className="space-y-3 text-muted-foreground">
                 <p>
-                  The materials on EliteStore's website are provided on an 'as is' basis. EliteStore makes no warranties,
+                  The materials on Shopify Store's website are provided on an 'as is' basis. Shopify Store makes no warranties,
                   expressed or implied, and hereby disclaims and negates all other warranties including, without limitation,
                   implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement
                   of intellectual property or other violation of rights.
@@ -171,9 +171,9 @@ const Terms = () => {
               <h2 className="text-2xl font-bold mb-4">11. Limitation of Liability</h2>
               <div className="space-y-3 text-muted-foreground">
                 <p>
-                  In no event shall EliteStore or its suppliers be liable for any damages (including, without limitation,
+                  In no event shall Shopify Store or its suppliers be liable for any damages (including, without limitation,
                   damages for loss of data or profit, or due to business interruption) arising out of the use or inability
-                  to use the materials on EliteStore's website, even if EliteStore or an authorized representative has been
+                  to use the materials on Shopify Store's website, even if Shopify Store or an authorized representative has been
                   notified orally or in writing of the possibility of such damage.
                 </p>
               </div>
@@ -183,7 +183,7 @@ const Terms = () => {
               <h2 className="text-2xl font-bold mb-4">12. Indemnification</h2>
               <div className="space-y-3 text-muted-foreground">
                 <p>
-                  You agree to indemnify, defend, and hold harmless EliteStore and its officers, directors, employees,
+                  You agree to indemnify, defend, and hold harmless Shopify Store and its officers, directors, employees,
                   agents, and third parties from and against any claims, liabilities, damages, judgments, awards, losses,
                   costs, expenses, or fees arising out of or relating to your violation of these Terms of Service or your
                   use of the website.
@@ -218,7 +218,7 @@ const Terms = () => {
                   If you have any questions about these Terms of Service, please contact us:
                 </p>
                 <div className="bg-secondary/30 rounded-lg p-4 mt-4">
-                  <p><strong>Email:</strong> legal@elitestore.com</p>
+                  <p><strong>Email:</strong> legal@shopifystore.com</p>
                   <p><strong>Phone:</strong> +1 (555) 123-4567</p>
                   <p><strong>Address:</strong> 123 Commerce Street, New York, NY 10001</p>
                 </div>

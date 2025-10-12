@@ -38,13 +38,13 @@ const Collection = () => {
       
       <main className="flex-1">
         <section className="bg-secondary/30 py-12">
-          <div className="container mx-auto px-4">
+          <div className="mx-auto px-4">
             <h1 className="text-4xl font-bold mb-2">Our Collection</h1>
             <p className="text-muted-foreground">Browse our complete range of premium products</p>
           </div>
         </section>
 
-        <section className="container mx-auto px-4 py-12">
+        <section className="mx-auto px-4 py-12">
           <div className="flex gap-8">
             <div className="hidden lg:block w-64 flex-shrink-0">
               <CategorySidebar />

@@ -16,7 +16,7 @@ const Contact = () => {
 
       <main className="flex-1">
         <section className="bg-secondary/30 py-16">
-          <div className="container mx-auto px-4">
+          <div className="mx-auto px-4">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
             <p className="text-lg text-muted-foreground max-w-2xl">
               Have a question? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
@@ -24,7 +24,7 @@ const Contact = () => {
           </div>
         </section>
 
-        <section className="container mx-auto px-4 py-16">
+        <section className="mx-auto px-4 py-16">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <h2 className="text-2xl font-bold mb-6">Send us a message</h2>
@@ -83,8 +83,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
-                    <p className="text-muted-foreground">support@elitestore.com</p>
-                    <p className="text-muted-foreground">sales@elitestore.com</p>
+                    <p className="text-muted-foreground">support@shopifystore.com</p>
+                    <p className="text-muted-foreground">sales@shopifystore.com</p>
                   </div>
                 </div>
 

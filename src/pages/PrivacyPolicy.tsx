@@ -149,7 +149,7 @@ const PrivacyPolicy = () => {
                   <li><strong>Object:</strong> Object to processing of your personal information</li>
                 </ul>
                 <p className="mt-3">
-                  To exercise these rights, please contact us at privacy@elitestore.com.
+                  To exercise these rights, please contact us at privacy@shopiftstore.com.
                 </p>
               </div>
             </div>
@@ -194,7 +194,7 @@ const PrivacyPolicy = () => {
                   If you have any questions about this Privacy Policy or our data practices, please contact us:
                 </p>
                 <div className="bg-secondary/30 rounded-lg p-4 mt-4">
-                  <p><strong>Email:</strong> privacy@elitestore.com</p>
+                  <p><strong>Email:</strong> privacy@shopiftstore.com</p>
                   <p><strong>Phone:</strong> +1 (555) 123-4567</p>
                   <p><strong>Address:</strong> 123 Commerce Street, New York, NY 10001</p>
                 </div>
