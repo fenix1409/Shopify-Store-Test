@@ -2,16 +2,16 @@ import { Link } from "react-router-dom";
 import { menuCategories, menuCollections } from "../data/navigations";
 import { X } from "lucide-react";
 
-interface MegaMenuProps {
+interface HeaderMenuProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-const MegaMenu = ({ isOpen, onClose }: MegaMenuProps) => {
+const HeaderMenu = ({ isOpen, onClose }: HeaderMenuProps) => {
   if (!isOpen) return null;
 
   return (
-    <div className={`fixed lg:absolute inset-0 lg:inset-auto lg:top-full lg:left-0 w-full h-screen lg:h-auto bg-white border-t border-gray-200 shadow-lg z-50 transform transition-all duration-300 ease-in-out ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'}`}>
+    <div className={`fixed lg:absolute inset-0 lg:inset-auto lg:top-full lg:left-0 w-full h-screen lg:h-auto bg-white border-t border-gray-200 shadow-lg z-50 transform transition-all duration-300 ease-in-out ${isOpen ? 'menu-slide-in' : 'opacity-0 -translate-x-full'}`}>
       <div className="lg:hidden flex items-center justify-between p-4 border-b border-gray-200 bg-white">
         <h2 className="text-lg font-bold text-gray-900">Menu</h2>
         <button
@@ -82,4 +82,4 @@ const MegaMenu = ({ isOpen, onClose }: MegaMenuProps) => {
   );
 };
 
-export default MegaMenu;
+export default HeaderMenu;

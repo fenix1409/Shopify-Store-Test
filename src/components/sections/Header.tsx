@@ -1,54 +1,54 @@
 import { Link } from "react-router-dom";
 import { ShoppingCart, Search, Menu, X, ChevronDown } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
-import { Button } from "./ui/button";
-import { headerNavItems, phoneNumber } from "../data/navigations";
-import MegaMenu from "./HeaderMenu";
+import { headerNavItems, phoneNumber } from "../../data/navigations";
+import { Button } from "../ui/button";
+import HeaderMenu from "../HeaderMenu";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [megaMenuOpen, setMegaMenuOpen] = useState(false);
-  const [megaMenuTimeout, setMegaMenuTimeout] = useState<any>(null);
-  const megaMenuRef = useRef<HTMLDivElement>(null);
+  const [headerMenuOpen, setHeaderMenuOpen] = useState(false);
+  const [HeaderMenuTimeout, setHeaderMenuTimeout] = useState<any>(null);
+  const HeaderMenuRef = useRef<HTMLDivElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
 
   const handleMenuEnter = () => {
-    if (megaMenuTimeout) {
-      clearTimeout(megaMenuTimeout);
+    if (HeaderMenuTimeout) {
+      clearTimeout(HeaderMenuTimeout);
     }
-    setMegaMenuOpen(true);
+    setHeaderMenuOpen(true);
   };
 
   const handleMenuLeave = () => {
     const timeout = setTimeout(() => {
-      setMegaMenuOpen(false);
+      setHeaderMenuOpen(false);
     }, 200);
-    setMegaMenuTimeout(timeout);
+    setHeaderMenuTimeout(timeout);
   };
 
-  const handleMegaMenuEnter = () => {
-    if (megaMenuTimeout) {
-      clearTimeout(megaMenuTimeout);
+  const handleHeaderMenuEnter = () => {
+    if (HeaderMenuTimeout) {
+      clearTimeout(HeaderMenuTimeout);
     }
-    setMegaMenuOpen(true);
+    setHeaderMenuOpen(true);
   };
 
-  const handleMegaMenuLeave = () => {
+  const handleHeaderMenuLeave = () => {
     const timeout = setTimeout(() => {
-      setMegaMenuOpen(false);
+      setHeaderMenuOpen(false);
     }, 200);
-    setMegaMenuTimeout(timeout);
+    setHeaderMenuTimeout(timeout);
   };
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
-        megaMenuRef.current &&
-        !megaMenuRef.current.contains(event.target as Node) &&
+        HeaderMenuRef.current &&
+        !HeaderMenuRef.current.contains(event.target as Node) &&
         menuButtonRef.current &&
         !menuButtonRef.current.contains(event.target as Node)
       ) {
-        setMegaMenuOpen(false);
+        setHeaderMenuOpen(false);
       }
     };
 
@@ -83,14 +83,14 @@ const Header = () => {
 
           <nav className="hidden lg:flex items-center space-x-8">
             {headerNavItems.map((item) => (
-              <div key={item.path} className="relative" onMouseEnter={item.hasDropdown ? handleMenuEnter : undefined} onMouseLeave={item.hasDropdown ? handleMenuLeave : undefined} ref={item.hasDropdown ? megaMenuRef : undefined}>
+              <div key={item.path} className="relative" onMouseEnter={item.hasDropdown ? handleMenuEnter : undefined} onMouseLeave={item.hasDropdown ? handleMenuLeave : undefined} ref={item.hasDropdown ? HeaderMenuRef : undefined}>
                 {item.hasDropdown ? (
                   <button
                     ref={menuButtonRef}
                     className="flex items-center space-x-1 text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors"
                   >
                     <span>{item.label}</span>
-                    <ChevronDown className={`h-4 w-4 transition-transform duration-300 ease-in-out ${megaMenuOpen ? 'rotate-180' : ''}`} />
+                    <ChevronDown className={`h-4 w-4 transition-transform duration-300 ease-in-out ${headerMenuOpen ? 'rotate-180' : ''}`} />
                   </button>
                 ) : (
                   <Link
@@ -151,11 +151,11 @@ const Header = () => {
       </div>
 
       <div
-        onMouseEnter={handleMegaMenuEnter}
-        onMouseLeave={handleMegaMenuLeave}
+        onMouseEnter={handleHeaderMenuEnter}
+        onMouseLeave={handleHeaderMenuLeave}
         className="duration-300"
       >
-        <MegaMenu isOpen={megaMenuOpen} onClose={() => setMegaMenuOpen(false)} />
+        <HeaderMenu isOpen={headerMenuOpen} onClose={() => setHeaderMenuOpen(false)} />
       </div>
 
       {mobileMenuOpen && (

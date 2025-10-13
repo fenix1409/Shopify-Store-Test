@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { SlidersHorizontal, X } from "lucide-react";
 import { products } from "../data/products";
-import Header from "../components/Header";
 import { Button } from "../components/ui/button";
 import ProductCard from "../components/ProductCard";
-import Footer from "../components/Footer";
+import Footer from "../components/sections/Footer";
 import CategorySidebar from "../components/CategorySidebar";
 
 const Collection = () => {
@@ -33,7 +32,6 @@ const Collection = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
       <main className="flex-1">
         <section className="bg-gray-50 py-12 border-b border-gray-200" data-aos="fade-down" data-aos-duration="800">
           <div className="container mx-auto px-4">

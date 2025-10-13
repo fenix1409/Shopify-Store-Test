@@ -1,10 +1,8 @@
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+import Footer from "../components/sections/Footer";
 
 const Terms = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
 
       <main className="flex-1">
         <section className="bg-secondary/30 py-16">

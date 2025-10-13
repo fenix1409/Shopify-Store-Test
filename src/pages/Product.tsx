@@ -1,9 +1,8 @@
 import { useParams, Link } from "react-router-dom";
 import { ShoppingCart, Heart, Share2, Check, Truck, RefreshCw, Shield, Star } from "lucide-react";
 import { products } from "../data/products";
-import Header from "../components/Header";
 import { Button } from "../components/ui/button";
-import Footer from "../components/Footer";
+import Footer from "../components/sections/Footer";
 import ProductCard from "../components/ProductCard";
 import ProductSubcategories from "../components/ProductSubcategories";
 
@@ -14,7 +13,6 @@ const Product = () => {
   if (!product) {
     return (
       <div className="min-h-screen flex flex-col">
-        <Header />
         <div className="flex-1 flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-2xl font-bold mb-4">Product not found</h1>
@@ -38,7 +36,6 @@ const Product = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
       
       <main className="flex-1">
         <div className="border-b border-gray-200">

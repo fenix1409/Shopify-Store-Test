@@ -1,6 +1,5 @@
 import { Shield, Eye, Lock, Users } from "lucide-react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Footer from "../components/sections/Footer";
 
 const PrivacyPolicy = () => {
   const secureDatas = [
@@ -11,7 +10,6 @@ const PrivacyPolicy = () => {
   ]
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
 
       <main className="flex-1">
         {/* Hero Section */}

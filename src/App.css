@@ -1,2 +1,46 @@
 @import "tailwindcss";
 @import "@radix-ui/themes/styles.css";
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes staggerIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-slide-in {
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.menu-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.stagger-item {
+  animation: staggerIn 0.5s ease-out forwards;
+  opacity: 0;
+}

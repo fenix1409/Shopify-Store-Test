@@ -17,6 +17,7 @@ import { Toaster as Sonner } from "./components/ui/sonner";
 import './App.css'
 import { useEffect } from 'react';
 import AOS from 'aos';
+import Header from "./components/sections/Header";
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -29,6 +30,7 @@ const App: React.FC = () => {
   }, []);
   return (
     <TooltipProvider>
+      <Header />
       <Toaster />
       <Sonner />
       <Routes>

@@ -1,9 +1,8 @@
 import { Package, Search } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
-import Header from "../components/Header";
 import { Button } from "../components/ui/button";
-import Footer from "../components/Footer";
+import Footer from "../components/sections/Footer";
 
 const TrackOrder = () => {
   const [orderNumber, setOrderNumber] = useState("");
@@ -21,7 +20,6 @@ const TrackOrder = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
 
       <main className="flex-1">
         <section className="bg-secondary/30 py-16">

@@ -1,6 +1,5 @@
 import { Award, Users, Target, Heart } from "lucide-react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Footer from "../components/sections/Footer";
 
 const VALUES = [
   {
@@ -34,7 +33,6 @@ const STATS = [
 
 const About: React.FC = () => (
   <div className="min-h-screen flex flex-col">
-    <Header />
 
     <main className="flex-1">
       <section data-aos="fade-right" className="bg-gray-100 py-16">
