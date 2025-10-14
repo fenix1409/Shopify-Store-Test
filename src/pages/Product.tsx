@@ -172,9 +172,6 @@ const Product = () => {
                     <button className="pb-4 px-1 text-gray-500 hover:text-gray-700 font-medium">
                       Description
                     </button>
-                    <button className="pb-4 px-1 text-gray-500 hover:text-gray-700 font-medium">
-                      Reviews (128)
-                    </button>
                   </div>
                 </div>
 

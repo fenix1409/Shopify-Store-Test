@@ -22,7 +22,7 @@ const TrackOrder = () => {
     <div className="min-h-screen flex flex-col">
 
       <main className="flex-1">
-        <section className="bg-secondary/30 py-16">
+        <section className="bg-secondary/30 py-16" data-aos="fade-right">
           <div className="container mx-auto px-4">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Track Your Order</h1>
             <p className="text-lg text-muted-foreground max-w-2xl">
@@ -31,7 +31,7 @@ const TrackOrder = () => {
           </div>
         </section>
 
-        <section className="container mx-auto px-4 py-16">
+        <section className="container mx-auto px-4 py-16" data-aos="zoom-in-up">
           <div className="max-w-2xl mx-auto">
             <div className="bg-card rounded-lg shadow-lg p-8">
               <div className="flex items-center justify-center mb-8">
@@ -71,7 +71,7 @@ const TrackOrder = () => {
                   </p>
                 </div>
 
-                <Button type="submit" size="lg" variant="accent" className="w-full gap-2">
+                <Button type="submit" size="lg" variant="accent" className="w-full gap-2 bg-gray-800 text-white">
                   <Search className="h-5 w-5" />
                   Track Order
                 </Button>

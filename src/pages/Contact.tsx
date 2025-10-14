@@ -13,7 +13,7 @@ const Contact = () => {
     <div className="min-h-screen flex flex-col">
 
       <main className="flex-1">
-        <section className="bg-secondary/30 py-16">
+        <section className="bg-secondary/30 py-16" data-aos="fade-right">
           <div className="mx-auto px-4">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
             <p className="text-lg text-muted-foreground max-w-2xl">
@@ -24,7 +24,7 @@ const Contact = () => {
 
         <section className="mx-auto px-4 py-16">
           <div className="grid md:grid-cols-2 gap-12">
-            <div>
+            <div data-aos="fade-right">
               <h2 className="text-2xl font-bold mb-6">Send us a message</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
@@ -66,13 +66,13 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button type="submit" size="lg" variant="accent" className="w-full">
+                <Button type="submit" size="lg" variant="accent" className="w-full bg-gray-800 text-white">
                   Send Message
                 </Button>
               </form>
             </div>
 
-            <div>
+            <div data-aos="fade-left">
               <h2 className="text-2xl font-bold mb-6">Get in touch</h2>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">

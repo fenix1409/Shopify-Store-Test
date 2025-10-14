@@ -53,7 +53,7 @@ const FAQ = () => {
   return (
     <div className="min-h-screen flex flex-col">
 
-      <main className="flex-1">
+      <main className="flex-1" data-aos="fade-right">
         <section className="bg-secondary/30 py-16">
           <div className="container mx-auto px-4">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Frequently Asked Questions</h1>
@@ -63,7 +63,7 @@ const FAQ = () => {
           </div>
         </section>
 
-        <section className="container mx-auto px-4 py-16">
+        <section className="container mx-auto px-4 py-16" data-aos="fade-up" data-aos-duration="3000">
           <div className="max-w-3xl mx-auto">
             <Accordion type="single" collapsible className="space-y-4">
               {faqs.map((faq, index) => (

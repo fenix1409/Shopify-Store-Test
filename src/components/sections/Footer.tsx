@@ -30,19 +30,12 @@ const Footer = () => {
     { day: "Saturday - Sunday", hours: "closed", isClosed: true }
   ];
 
-  const socialLinks = [
-    { icon: "fab fa-facebook-f", url: "#" },
-    { icon: "fab fa-twitter", url: "#" },
-    { icon: "fab fa-instagram", url: "#" },
-    { icon: "fab fa-linkedin-in", url: "#" }
-  ];
-
   return (
     <footer className="bg-gray-900 text-white pt-12 pb-8 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-10">
 
-          <div className="space-y-4">
+          <div data-aos="fade-up" data-aos-duration="1000" className="space-y-4">
             <h3 className="font-bold text-lg mb-4 border-b border-gray-700 pb-3">POLICIES</h3>
             <ul className="space-y-3">
               {policies.map((policy) => (
@@ -58,7 +51,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="space-y-4">
+          <div data-aos="fade-up" data-aos-duration="1000" className="space-y-4">
             <h3 className="font-bold text-lg mb-4 border-b border-gray-700 pb-3">SUPPORT</h3>
             <ul className="space-y-3">
               {support.map((item) => (
@@ -81,7 +74,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="space-y-4">
+          <div data-aos="fade-up" data-aos-duration="1000" className="space-y-4">
             <h3 className="font-bold text-lg mb-4 border-b border-gray-700 pb-3">CONTACT US</h3>
             <div className="space-y-3 text-gray-300">
               {contacts.map((contact) => (
@@ -118,12 +111,11 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="space-y-4">
+          <div data-aos="fade-up" data-aos-duration="1000" className="space-y-4">
             <h3 className="font-bold text-lg mb-4 border-b border-gray-700 pb-3">NEWSLETTER</h3>
             <div className="space-y-4 text-gray-300">
               <p className="text-sm leading-relaxed md:text-base">
-                Stay in touch with us to receive our tips to help you improve your daily life and our promotions.
-                When you subscribe, you'll receive a 10% discount coupon code, guaranteed spam-free.
+                Stay in touch with us to receive our tips to help you improve your daily life and our promotions. When you subscribe, you'll receive a 10% discount coupon code, guaranteed spam-free.
               </p>
 
               <form className="space-y-3">
@@ -138,10 +130,7 @@ const Footer = () => {
                     className="flex-1 px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-sm md:text-base"
                     required
                   />
-                  <button
-                    type="submit"
-                    className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-all duration-200 whitespace-nowrap text-sm md:text-base hover:shadow-lg hover:shadow-blue-600/25"
-                  >
+                  <button type="submit" className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-all duration-200 whitespace-nowrap text-sm md:text-base hover:shadow-lg hover:shadow-blue-600/25">
                     Subscribe
                   </button>
                 </div>
@@ -150,18 +139,6 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex space-x-5">
-          {socialLinks.map((social, index) => (
-            <Link
-              key={index}
-              to={social.url}
-              className="text-gray-400 hover:text-white transition-colors duration-200 p-2 hover:bg-gray-800 rounded-full"
-              aria-label={`Follow us on ${social.icon.split('-')[1]}`}
-            >
-              <i className={`${social.icon} text-lg`}></i>
-            </Link>
-          ))}
-        </div>
       </div>
     </footer>
   );

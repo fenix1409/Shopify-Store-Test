@@ -140,11 +140,11 @@ const Index: React.FC = () => {
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
               Get exclusive access to special offers, new arrivals, and insider updates.
             </p>
-            <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" onSubmit={(e) => { e.preventDefault() }} data-aos="fade-up" data-aos-delay="300">
+            <form className="flex flex-col items-center sm:flex-row gap-4 max-w-md mx-auto" onSubmit={(e) => { e.preventDefault() }} data-aos="fade-up" data-aos-delay="300">
               <input
                 type="email"
                 placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-sm md:text-base"
+                className="flex-1 px-4 py-3 border-white border-2 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-sm md:text-base"
                 required
                 autoComplete="email"
               />
