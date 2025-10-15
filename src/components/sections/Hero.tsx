@@ -16,7 +16,7 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-black/20" />
             </div>
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-                <div className="max-w-2xl">
+                <div className="max-w-2xl text-start">
                     <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight" data-aos="fade-up" data-aos-delay="200">
                         Summer
                         <span className="block text-5xl md:text-6xl lg:text-7xl text-white mt-2" data-aos="fade-up" data-aos-delay="300">

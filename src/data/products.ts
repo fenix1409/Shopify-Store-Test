@@ -1,11 +1,22 @@
-import product1 from "../assets/product-1.jpg";
-import product2 from "../assets/product-2.jpg";
-import product3 from "../assets/product-3.jpg";
-import product4 from "../assets/product-4.jpg";
-import product5 from "../assets/product-5.jpg";
-import product6 from "../assets/product-6.jpg";
-import product7 from "../assets/product-7.jpg";
-import product8 from "../assets/product-8.jpg";
+import headphonesWireless from "../assets/headphones-wireless.jpg";
+import smartwatchPro from "../assets/smartwatch-pro.jpg";
+import speakerBluetooth from "../assets/speaker-bluetooth.jpg";
+import earbudsWireless from "../assets/earbuds-wireless.jpg";
+import actionCamera4k from "../assets/action-camera-4k.jpg";
+import keyboardGaming from "../assets/keyboard-gaming.jpg";
+import backpackLeather from "../assets/backpack-leather.jpg";
+import crossbodyBag from "../assets/crossbody-bag.jpg";
+import sunglassesDesigner from "../assets/sunglasses-designer.jpg";
+import walletLeather from "../assets/wallet-leather.jpg";
+import necklaceSilver from "../assets/necklace-silver.jpg";
+import sneakersRunning from "../assets/sneakers-running.jpg";
+import loafersLeather from "../assets/loafers-leather.jpg";
+import perfumeLuxury from "../assets/perfume-luxury.jpg";
+import skincareSet from "../assets/skincare-set.jpg";
+import plantersCeramic from "../assets/planters-ceramic.jpg";
+import tshirtOrganic from "../assets/tshirt-organic.jpg";
+import yogaMat from "../assets/yoga-mat.jpg";
+import buildingBlocks from "../assets/building-blocks.jpg";
 
 export interface Product {
   id: string;
@@ -36,8 +47,8 @@ export const products: Product[] = [
     description: "Experience crystal-clear audio with our premium wireless headphones. Features active noise cancellation, 30-hour battery life, and comfortable over-ear design perfect for all-day listening.",
     price: 199.99,
     originalPrice: 299.99,
-    image: product1,
-    images: [product1, product1, product1],
+    image: headphonesWireless,
+    images: [headphonesWireless, headphonesWireless, headphonesWireless],
     category: "Electronics",
     badge: "Best Seller",
     inStock: true,
@@ -61,8 +72,8 @@ export const products: Product[] = [
     name: "Smart Watch Pro",
     description: "Stay connected with our feature-packed smartwatch. Track your fitness, receive notifications, and monitor your health with advanced sensors.",
     price: 249.99,
-    image: product3,
-    images: [product3, product3, product3],
+    image: smartwatchPro,
+    images: [smartwatchPro, smartwatchPro, smartwatchPro],
     category: "Electronics",
     inStock: true,
     features: [
@@ -85,8 +96,8 @@ export const products: Product[] = [
     name: "Portable Bluetooth Speaker",
     description: "Take your music anywhere with this powerful portable speaker. Waterproof design with 360-degree sound and 20-hour battery.",
     price: 89.99,
-    image: product7,
-    images: [product7, product7, product7],
+    image: speakerBluetooth,
+    images: [speakerBluetooth, speakerBluetooth, speakerBluetooth],
     category: "Electronics",
     inStock: true,
     features: [
@@ -110,8 +121,8 @@ export const products: Product[] = [
     description: "True wireless earbuds with superior sound quality and comfortable fit. Perfect for workouts and daily commutes.",
     price: 129.99,
     originalPrice: 179.99,
-    image: product1,
-    images: [product1, product1, product1],
+    image: earbudsWireless,
+    images: [earbudsWireless, earbudsWireless, earbudsWireless],
     category: "Electronics",
     badge: "New",
     inStock: true,
@@ -136,8 +147,8 @@ export const products: Product[] = [
     description: "Capture your adventures in stunning 4K resolution. Waterproof, shockproof, and packed with professional features.",
     price: 299.99,
     originalPrice: 399.99,
-    image: product3,
-    images: [product3, product3, product3],
+    image: actionCamera4k,
+    images: [actionCamera4k, actionCamera4k, actionCamera4k],
     category: "Electronics",
     badge: "Sale",
     inStock: true,
@@ -161,8 +172,8 @@ export const products: Product[] = [
     name: "Gaming Mechanical Keyboard",
     description: "RGB mechanical keyboard with customizable keys and fast response time. Perfect for gaming and productivity.",
     price: 149.99,
-    image: product7,
-    images: [product7, product7, product7],
+    image: keyboardGaming,
+    images: [keyboardGaming, keyboardGaming, keyboardGaming],
     category: "Electronics",
     inStock: true,
     features: [
@@ -188,8 +199,8 @@ export const products: Product[] = [
     description: "Handcrafted genuine leather backpack with multiple compartments. Perfect for work, travel, or everyday use.",
     price: 159.99,
     originalPrice: 229.99,
-    image: product2,
-    images: [product2, product2, product2],
+    image: backpackLeather,
+    images: [backpackLeather, backpackLeather, backpackLeather],
     category: "Bags",
     badge: "New",
     inStock: true,
@@ -213,8 +224,8 @@ export const products: Product[] = [
     name: "Minimalist Crossbody Bag",
     description: "Sleek crossbody bag made from vegan leather. Compact yet spacious enough for daily essentials.",
     price: 79.99,
-    image: product2,
-    images: [product2, product2, product2],
+    image: crossbodyBag,
+    images: [crossbodyBag, crossbodyBag, crossbodyBag],
     category: "Bags",
     inStock: true,
     features: [
@@ -240,8 +251,8 @@ export const products: Product[] = [
     description: "Protect your eyes in style with these premium designer sunglasses. UV400 protection with polarized lenses.",
     price: 129.99,
     originalPrice: 179.99,
-    image: product4,
-    images: [product4, product4, product4],
+    image: sunglassesDesigner,
+    images: [sunglassesDesigner, sunglassesDesigner, sunglassesDesigner],
     category: "Accessories",
     inStock: true,
     features: [
@@ -265,8 +276,8 @@ export const products: Product[] = [
     description: "Slim, sleek design crafted from premium leather. Holds all your essentials without the bulk.",
     price: 49.99,
     originalPrice: 79.99,
-    image: product6,
-    images: [product6, product6, product6],
+    image: walletLeather,
+    images: [walletLeather, walletLeather, walletLeather],
     category: "Accessories",
     inStock: true,
     features: [
@@ -290,8 +301,8 @@ export const products: Product[] = [
     description: "Elegant sterling silver necklace with adjustable length. Perfect for everyday wear or special occasions.",
     price: 89.99,
     originalPrice: 129.99,
-    image: product4,
-    images: [product4, product4, product4],
+    image: necklaceSilver,
+    images: [necklaceSilver, necklaceSilver, necklaceSilver],
     category: "Accessories",
     badge: "Best Seller",
     inStock: true,
@@ -318,8 +329,8 @@ export const products: Product[] = [
     description: "Engineered for performance with responsive cushioning and breathable mesh upper.",
     price: 139.99,
     originalPrice: 189.99,
-    image: product5,
-    images: [product5, product5, product5],
+    image: sneakersRunning,
+    images: [sneakersRunning, sneakersRunning, sneakersRunning],
     category: "Footwear",
     badge: "Sale",
     inStock: true,
@@ -344,8 +355,8 @@ export const products: Product[] = [
     description: "Timeless leather loafers perfect for business casual or smart casual occasions.",
     price: 119.99,
     originalPrice: 159.99,
-    image: product5,
-    images: [product5, product5, product5],
+    image: loafersLeather,
+    images: [loafersLeather, loafersLeather, loafersLeather],
     category: "Footwear",
     inStock: true,
     features: [
@@ -371,8 +382,8 @@ export const products: Product[] = [
     description: "Sophisticated fragrance with notes of bergamot, jasmine, and sandalwood.",
     price: 119.99,
     originalPrice: 159.99,
-    image: product8,
-    images: [product8, product8, product8],
+    image: perfumeLuxury,
+    images: [perfumeLuxury, perfumeLuxury, perfumeLuxury],
     category: "Beauty",
     badge: "Limited Edition",
     inStock: true,
@@ -397,8 +408,8 @@ export const products: Product[] = [
     description: "Complete skincare routine with serum, moisturizer, and eye cream for radiant, youthful skin.",
     price: 149.99,
     originalPrice: 199.99,
-    image: product8,
-    images: [product8, product8, product8],
+    image: skincareSet,
+    images: [skincareSet, skincareSet, skincareSet],
     category: "Beauty",
     badge: "Best Seller",
     inStock: true,
@@ -425,8 +436,8 @@ export const products: Product[] = [
     description: "Beautiful handcrafted ceramic planters perfect for indoor plants and succulents.",
     price: 69.99,
     originalPrice: 99.99,
-    image: product6,
-    images: [product6, product6, product6],
+    image: plantersCeramic,
+    images: [plantersCeramic, plantersCeramic, plantersCeramic],
     category: "Home & Garden",
     badge: "New",
     inStock: true,
@@ -453,8 +464,8 @@ export const products: Product[] = [
     description: "Soft, comfortable organic cotton t-shirt available in multiple colors. Perfect for everyday wear.",
     price: 29.99,
     originalPrice: 39.99,
-    image: product2,
-    images: [product2, product2, product2],
+    image: tshirtOrganic,
+    images: [tshirtOrganic, tshirtOrganic, tshirtOrganic],
     category: "Clothing",
     inStock: true,
     features: [
@@ -480,8 +491,8 @@ export const products: Product[] = [
     description: "Eco-friendly yoga mat with superior grip and cushioning for all types of yoga practice.",
     price: 59.99,
     originalPrice: 79.99,
-    image: product5,
-    images: [product5, product5, product5],
+    image: yogaMat,
+    images: [yogaMat, yogaMat, yogaMat],
     category: "Sports & Outdoors",
     inStock: true,
     features: [
@@ -507,8 +518,8 @@ export const products: Product[] = [
     description: "STEM educational building blocks set that encourages creativity and learning through play.",
     price: 49.99,
     originalPrice: 69.99,
-    image: product7,
-    images: [product7, product7, product7],
+    image: buildingBlocks,
+    images: [buildingBlocks, buildingBlocks, buildingBlocks],
     category: "Kids & Toys",
     badge: "Educational",
     inStock: true,
@@ -529,17 +540,14 @@ export const products: Product[] = [
   }
 ];
 
-// Helper function to get products by category
 export const getProductsByCategory = (category: string): Product[] => {
   return products.filter(product => product.category === category);
 };
 
-// Helper function to get featured products
 export const getFeaturedProducts = (): Product[] => {
   return products.filter(product => product.badge === "Best Seller" || product.badge === "New");
 };
 
-// Helper function to get products on sale
 export const getSaleProducts = (): Product[] => {
   return products.filter(product => product.originalPrice && product.originalPrice > product.price);
 };

@@ -7,6 +7,7 @@ import ProductCard from "../components/ProductCard";
 import Footer from "../components/sections/Footer";
 import BestSellerSection from "../components/BestSellerSection";
 import SwiperHero from "../components/Swiper";
+import ShowcaseProducts from "../components/sections/ShowcaseProducts";
 
 const CATEGORIES = [
   { name: "Electronics", key: "electronics" },
@@ -44,6 +45,8 @@ const Index: React.FC = () => {
             <TrustBadges />
           </div>
         </section>
+
+        <ShowcaseProducts />
 
         <section className="bg-white border-b border-gray-200" data-aos="fade-up">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

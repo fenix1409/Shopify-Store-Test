@@ -7,20 +7,19 @@ export const headerNavItems = [
 
 export const phoneNumber = "(800) 716-0481";
 
-// export const menuCategories = [
-//   { name: "Beauty - Selfcare", link: "/category/beauty" },
-//   { name: "Cleaning", link: "/category/cleaning" },
-//   { name: "DIY - Garden", link: "/category/diy-garden" },
-//   { name: "Fashion - Accessories", link: "/category/fashion" },
-//   { name: "Garage - Vehicles", link: "/category/garage" },
-//   { name: "Health - Wellness", link: "/category/health" },
-//   { name: "Home - Decoration", link: "/category/home" },
-//   { name: "Kitchen", link: "/category/kitchen" },
-//   { name: "Products for Pets", link: "/category/pets" },
-//   { name: "Sport - Outdoor activities", link: "/category/sports" },
-//   { name: "Technology - Gadget", link: "/category/technology" },
-//   { name: "Toys - Children", link: "/category/toys" }
-// ];
+export const categoryLinks = [
+  { name: "Beauty", path: "/collection?category=beauty" },
+  { name: "HairCare", path: "/collection?category=haircare" },
+  { name: "Fashion", path: "/collection?category=fashion" },
+  { name: "Living&Sleeping", path: "/collection?category=living-sleeping" },
+  { name: "Electronics", path: "/collection?category=electronics" },
+  { name: "Gifts", path: "/collection?category=gifts" },
+  { name: "Plants &Garden", path: "/collection?category=plants-garden" },
+  { name: "Pets", path: "/collection?category=pets" },
+  { name: "eM 27", path: "/collection?category=em-27" },
+  { name: "Theme features", path: "/collection?category=theme-features" }
+]
+
 export const menuCategories = [
   { name: "Beauty - Selfcare", link: "#" },
   { name: "Cleaning", link: "#" },
@@ -36,15 +35,21 @@ export const menuCategories = [
   { name: "Toys - Children", link: "#" }
 ];
 
-// export const menuCollections = [
-//   { name: "Best sellers", link: "/collection/best-sellers" },
-//   { name: "Last arrivals", link: "/collection/new-arrivals" },
-//   { name: "On sale", link: "/collection/sale" },
-//   { name: "All under US$20", link: "/collection/under-20" }
-// ];
 export const menuCollections = [
   { name: "Best sellers", link: "#" },
   { name: "Last arrivals", link: "#" },
   { name: "On sale", link: "#" },
   { name: "All under US$20", link: "#" }
 ];
+
+export const links = [
+  { name: "Home", path: "/" },
+  { name: "About Us", path: "/about" },
+  { name: "Skin Care", path: "/collection?category=skin-care" },
+  { name: "Health Supplements", path: "/collection?category=health-supplements" },
+  { name: "Health Care", path: "/collection?category=health-care" },
+  { name: "Beauty Products", path: "/collection?category=beauty-products" },
+  { name: "Dresses", path: "/collection?category=dresses" },
+  { name: "Home & Living", path: "/collection?category=home-living" },
+  { name: "Contact Us", path: "/contact" }
+]
