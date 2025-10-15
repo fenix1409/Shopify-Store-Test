@@ -154,7 +154,7 @@ const ShowcaseProducts = () => {
         {/* Premium CTA */}
         <div className="text-center mt-16" data-aos="fade-up">
           <Link
-            to="/collections"
+            to="/collection"
             className="inline-flex items-center px-12 py-5 bg-gradient-to-r from-gray-900 to-black text-white text-xl font-light rounded-full hover:from-gray-800 hover:to-gray-900 transition-all duration-500 transform hover:scale-105 shadow-2xl hover:shadow-3xl group"
           >
             <span className="tracking-wide">View All Collections</span>
