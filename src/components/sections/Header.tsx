@@ -6,10 +6,10 @@ import { Button } from "../ui/button";
 import HeaderMenu from "../HeaderMenu";
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [headerMenuOpen, setHeaderMenuOpen] = useState(false);
   const [headerMenuTimeout, setHeaderMenuTimeout] = useState<any>(null);
-  const [isScrolled, setIsScrolled] = useState(false);
   const headerMenuRef = useRef<HTMLDivElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -20,7 +20,7 @@ const Header = () => {
       if (!ticking) {
         requestAnimationFrame(() => {
           const scrollTop = window.scrollY;
-          setIsScrolled(scrollTop > 50);
+          setIsScrolled(scrollTop > 0);
           ticking = false;
         });
         ticking = true;

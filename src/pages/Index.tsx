@@ -6,9 +6,8 @@ import TrustBadges from "../components/TrustBadges";
 import ProductCard from "../components/ProductCard";
 import Footer from "../components/sections/Footer";
 import BestSellerSection from "../components/BestSellerSection";
-// import SwiperHero from "../components/Swiper";
 import ShowcaseProducts from "../components/sections/ShowcaseProducts";
-import Hero from "../components/sections/Hero";
+import SwiperHero from "../components/Swiper";
 
 const CATEGORIES = [
   { name: "Electronics", key: "electronics" },
@@ -39,10 +38,9 @@ const Index: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <main className="flex-1">
-        {/* <SwiperHero/> */}
-        <Hero/>
+        <SwiperHero />
 
-        <section className="bg-white border-b border-gray-200" data-aos="fade-up" data-aos-delay="200">
+        <section className="bg-white border-b border-gray-200" data-aos="fade-up">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <TrustBadges />
           </div>
