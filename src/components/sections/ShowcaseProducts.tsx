@@ -14,7 +14,7 @@ const ShowcaseProducts = () => {
       image: tshirtImage,
       bgColor: "bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800",
       accentColor: "from-blue-500 to-purple-600",
-      link: "/collection/winter-clothing"
+      link: "/collection"
     },
     {
       title: "For your car",
@@ -22,7 +22,7 @@ const ShowcaseProducts = () => {
       image: carAccessoriesImage,
       bgColor: "bg-gradient-to-br from-gray-800 via-gray-900 to-blue-900",
       accentColor: "from-gray-600 to-blue-700",
-      link: "/collection/car-accessories"
+      link: "/collection"
     },
     {
       title: "Gadgets",
@@ -30,7 +30,7 @@ const ShowcaseProducts = () => {
       image: smartwatchImage,
       bgColor: "bg-gradient-to-br from-emerald-600 via-teal-700 to-green-800",
       accentColor: "from-emerald-500 to-green-600",
-      link: "/collection/gadgets"
+      link: "/collection"
     },
     {
       title: "Toys and plushs",
@@ -38,7 +38,7 @@ const ShowcaseProducts = () => {
       image: buildingBlocksImage,
       bgColor: "bg-gradient-to-br from-orange-500 via-red-500 to-pink-600",
       accentColor: "from-orange-400 to-pink-500",
-      link: "/collection/toys"
+      link: "/collection"
     },
     {
       title: "Pet lover?",
@@ -46,7 +46,7 @@ const ShowcaseProducts = () => {
       image: petSuppliesImage,
       bgColor: "bg-gradient-to-br from-purple-500 via-pink-600 to-rose-600",
       accentColor: "from-purple-400 to-rose-500",
-      link: "/collection/pet-supplies"
+      link: "/collection"
     },
     {
       title: "Style Essentials",
@@ -54,7 +54,7 @@ const ShowcaseProducts = () => {
       image: sunglassesImage,
       bgColor: "bg-gradient-to-br from-indigo-600 via-purple-700 to-violet-800",
       accentColor: "from-indigo-500 to-violet-600",
-      link: "/collection/fashion"
+      link: "/collection"
     }
   ];
 
