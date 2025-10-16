@@ -8,6 +8,8 @@ import Footer from "../components/sections/Footer";
 import BestSellerSection from "../components/BestSellerSection";
 import ShowcaseProducts from "../components/sections/ShowcaseProducts";
 import SwiperHero from "../components/Swiper";
+import showcaseImage from "../assets/showcase-products.jpg";
+import CategoryGrid from "../components/sections/CategoryGrid";
 
 const CATEGORIES = [
   { name: "Electronics", key: "electronics" },
@@ -102,6 +104,41 @@ const Index: React.FC = () => {
             ))}
           </div>
         </section>
+
+        <section className="py-20 bg-gradient-to-br from-orange-50 via-white to-orange-50">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+              <div className="space-y-6 animate-fade-in" data-aos="fade-right">
+                <h2 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
+                  Curated for Excellence
+                </h2>
+                <p className="text-xl text-gray-600 leading-relaxed">
+                  Every item is handpicked and tested to ensure it meets our premium standards.
+                  Discover products that combine style, quality, and lasting value.
+                </p>
+                <Link to="/collection">
+                  <Button
+                    size="lg"
+                    className="bg-gray-900 hover:bg-gray-600 text-white font-semibold text-lg px-10 py-7 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                  >
+                    Explore Collection
+                  </Button>
+                </Link>
+              </div>
+
+              <div className="relative animate-fade-in" data-aos="fade-left">
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-200 to-orange-100 rounded-3xl transform rotate-3 opacity-20"></div>
+                <img
+                  src={showcaseImage}
+                  alt="Premium product collection showcase"
+                  className="relative rounded-3xl shadow-2xl w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <CategoryGrid />
 
         <section className="bg-white" data-aos="fade-up">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
