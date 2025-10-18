@@ -10,6 +10,7 @@ import ShowcaseProducts from "../components/sections/ShowcaseProducts";
 import SwiperHero from "../components/Swiper";
 import showcaseImage from "../assets/showcase-products.jpg";
 import CategoryGrid from "../components/sections/CategoryGrid";
+import Hero from "../components/sections/Hero";
 
 const CATEGORIES = [
   { name: "Electronics", key: "electronics" },
@@ -40,7 +41,8 @@ const Index: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <main className="flex-1">
-        <SwiperHero />
+        {/* <SwiperHero />  */}
+        <Hero />
 
         <section className="bg-white border-b border-gray-200" data-aos="fade-up">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -84,7 +86,7 @@ const Index: React.FC = () => {
               ))}
             </div>
             <div className="text-center" data-aos="zoom-in" data-aos-delay="400">
-              <Button asChild size="lg" className="bg-gray-900 text-white hover:bg-gray-800 px-8 py-4 text-lg rounded-none">
+              <Button asChild size="lg" className="inline-flex items-center px-12 py-5 bg-gradient-to-r from-gray-900 to-black text-white text-xl font-light rounded-full hover:from-gray-800 hover:to-gray-900 transition-all duration-500 transform hover:scale-105 shadow-2xl hover:shadow-3xl group">
                 <Link to="/collection">View All Products</Link>
               </Button>
             </div>
