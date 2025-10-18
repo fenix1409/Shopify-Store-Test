@@ -43,13 +43,13 @@ export const menuCollections = [
 ];
 
 export const links = [
-  { name: "Home", path: "/" },
-  { name: "About Us", path: "/about" },
-  { name: "Skin Care", path: "/collection?category=skin-care" },
-  { name: "Health Supplements", path: "/collection?category=health-supplements" },
-  { name: "Health Care", path: "/collection?category=health-care" },
-  { name: "Beauty Products", path: "/collection?category=beauty-products" },
-  { name: "Dresses", path: "/collection?category=dresses" },
-  { name: "Home & Living", path: "/collection?category=home-living" },
-  { name: "Contact Us", path: "/contact" }
+  { name: "Home", path: "/", hasDropdown: false },
+  { name: "About Us", path: "/about", hasDropdown: false },
+  { name: "Skin Care", path: "/collection?category=skin-care", hasDropdown: false },
+  { name: "Health Supplements", path: "/collection?category=health-supplements", hasDropdown: false },
+  { name: "Health Care", path: "/collection?category=health-care", hasDropdown: false },
+  { name: "Beauty Products", path: "/collection?category=beauty-products", hasDropdown: false },
+  { name: "Dresses", path: "/collection?category=dresses", hasDropdown: false },
+  { name: "Home & Living", path: "/collection?category=home-living", hasDropdown: false },
+  { name: "Contact Us", path: "/contact", hasDropdown: false }
 ]

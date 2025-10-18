@@ -7,7 +7,6 @@ import ProductCard from "../components/ProductCard";
 import Footer from "../components/sections/Footer";
 import BestSellerSection from "../components/BestSellerSection";
 import ShowcaseProducts from "../components/sections/ShowcaseProducts";
-import SwiperHero from "../components/Swiper";
 import showcaseImage from "../assets/showcase-products.jpg";
 import CategoryGrid from "../components/sections/CategoryGrid";
 import Hero from "../components/sections/Hero";
@@ -41,7 +40,6 @@ const Index: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <main className="flex-1">
-        {/* <SwiperHero />  */}
         <Hero />
 
         <section className="bg-white border-b border-gray-200" data-aos="fade-up">
